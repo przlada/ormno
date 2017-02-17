@@ -1,0 +1,6 @@
+model ufl_WIP.mod;
+data gs500c-5.dat;
+option solver "./cplex";
+solve;
+options omit_zero_cols 1;
+display _total_solve_time, cost, x > /ampl_results/gs500c-5_cplex_WIP.out;

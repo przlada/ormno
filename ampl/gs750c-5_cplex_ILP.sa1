@@ -1,0 +1,6 @@
+model ufl_ILP.mod;
+data gs750c-5.dat;
+option solver "./cplex";
+solve;
+options omit_zero_cols 1;
+display _total_solve_time, cost, x > /ampl_results/gs750c-5_cplex_ILP.out;

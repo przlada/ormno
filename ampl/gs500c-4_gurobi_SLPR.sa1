@@ -1,0 +1,6 @@
+model ufl_SLPR.mod;
+data gs500c-4.dat;
+option solver "./gurobi";
+solve;
+options omit_zero_cols 1;
+display _total_solve_time, cost, x > /ampl_results/gs500c-4_gurobi_SLPR.out;

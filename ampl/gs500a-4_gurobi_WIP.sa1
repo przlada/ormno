@@ -1,0 +1,6 @@
+model ufl_WIP.mod;
+data gs500a-4.dat;
+option solver "./gurobi";
+solve;
+options omit_zero_cols 1;
+display _total_solve_time, cost, x > /ampl_results/gs500a-4_gurobi_WIP.out;

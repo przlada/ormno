@@ -1,0 +1,6 @@
+model ufl_WIP.mod;
+data gs750c-2.dat;
+option solver "./gurobi";
+solve;
+options omit_zero_cols 1;
+display _total_solve_time, cost, x > /ampl_results/gs750c-2_gurobi_WIP.out;
